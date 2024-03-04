@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="batch_transfer_inherit_form" model="ir.ui.view">
+        <field name="name">batch.transfer.inherit.form</field>
+        <field name="model">stock.picking.batch</field>
+        <field name="inherit_id" ref="stock_picking_batch.stock_picking_batch_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='scheduled_date']" position="after">
+                <field name="dock" />
+                <field name="vehicle" placeholder="Third Party Provider"/>
+                <field name="vehicle_category" placeholder="Semi-Truck (250kg/30m³)"/>
+                <field name="weight" widget="progressbar"/>
+                <field name="volume" widget="progressbar"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
