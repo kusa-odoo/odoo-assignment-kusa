@@ -8,10 +8,21 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='scheduled_date']" position="after">
                 <field name="dock" />
-                <field name="vehicle" placeholder="Third Party Provider"/>
-                <field name="vehicle_category" placeholder="Semi-Truck (250kg/30m³)"/>
+                <field name="vehicle_ids" placeholder="Third Party Provider"/>
+                <field name="category_ids" placeholder="Semi-Truck (250kg/30m³)"/>
                 <field name="weight" widget="progressbar"/>
                 <field name="volume" widget="progressbar"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="inherited_stock_picking_view_tree" model="ir.ui.view">
+        <field name="name">stock.picking.tree.inherited</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.vpicktree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='origin']" position="after">
+                <field name="volume" />
             </xpath>
         </field>
     </record>

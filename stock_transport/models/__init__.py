@@ -3,3 +3,5 @@
 
 from . import fleet_category_inherit
 from . import batch_transfer_inherit
+from . import stock_pick_inherit
+from . import fleet_dock

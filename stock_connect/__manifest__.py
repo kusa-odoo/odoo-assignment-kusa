@@ -4,15 +4,14 @@
 {
     'name': 'Transport Management System',
     'version' : '1.0',
-    'category': 'stock_transport',
+    'category': 'stock_connect',
     'summary':'A Transport Management System',
-    'depends': ['base','stock','fleet','stock_picking_batch'],
+    'depends': ['stock'],
     'data':[
-        'views/batch_transfer_inherit_view.xml',
-        'views/fleet_category_inherit_view.xml',
-        'views/stock_picking_batch_graph.xml'
+        'views/settings_inherit_view.xml'
     ],
     'installable':True,
+    'auto_install':True,
     'application':True,
     'license': 'LGPL-3'
 }
